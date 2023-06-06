@@ -29,3 +29,10 @@ Route::get('cari-sapi', function () {
     return view('cari-sapi');
 });
 
+Route::get('admin', function(){
+    return view('admin.index');
+});
+
+Route::get('admin-kelola-peternak', function(){
+    return view('admin.kelola-peternak');
+});
