@@ -29,6 +29,16 @@ Route::get('cari-sapi', function () {
     return view('cari-sapi');
 });
 
+Route::get('peternak', function () {
+    return view('peternak.index');
+});
+
+Route::get('kelola-ternak', function () {
+    return view('peternak.kelola-ternak');
+});
+
+
+
 Route::get('admin', function(){
     return view('admin.index');
 });
