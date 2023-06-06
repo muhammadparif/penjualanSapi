@@ -25,3 +25,7 @@ Route::get('registrasi', function () {
     return view('form.registrasi');
 });
 
+Route::get('cari-sapi', function () {
+    return view('cari-sapi');
+});
+
