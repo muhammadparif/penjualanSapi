@@ -74,16 +74,14 @@
                                     <i class="nav-icon fas fa-tachometer-alt"></i>
                                     <p>
                                         Dashboard
-                                        <i class="right fas fa-angle-left"></i>
                                     </p>
                                 </a>
                             </li>
                             <li class="nav-item menu-open">
                                 <a href="{{ url('kelola-ternak') }}" class="nav-link active">
-                                    <i class="nav-icon fas fa-users"></i>
+                                    <i class="nav-icon fas fa-cogs"></i>
                                     <p>
                                         Kelola Ternak
-                                        <i class="right fas fa-angle-left"></i>
                                     </p>
                                 </a>
                             </li>
@@ -102,6 +100,51 @@
                             <div class="col-sm-6">
                                 <h1 class="m-0">Kelola ternak</h1>
                             </div><!-- /.col -->
+                            <div class="col-md-12 mt-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <table id="example1" class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Nama Peternak</th>
+                                                    <th>Alamat</th>
+                                                    <th>Aksi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Muh. Parif</td>
+                                                    <td>Campalagian</td>
+                                                    <td>
+                                                        <a href="" class="btn btn-info btn-sm"><i
+                                                                class="fas fa-eye"></i></a>
+                                                        <a href="" class="btn btn-warning btn-sm"><i
+                                                                class="fas fa-edit"></i></a>
+                                                        <a href="" class="btn btn-danger btn-sm"><i
+                                                                class="fas fa-trash-alt"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Muh. Parif</td>
+                                                    <td>Majene</td>
+                                                    <td>
+                                                        <a href="" class="btn btn-info btn-sm"><i
+                                                                class="fas fa-eye"></i></a>
+                                                        <a href="" class="btn btn-warning btn-sm"><i
+                                                                class="fas fa-edit"></i></a>
+                                                        <a href="" class="btn btn-danger btn-sm"><i
+                                                                class="fas fa-trash-alt"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </div>
                         </div><!-- /.row -->
                     </div><!-- /.container-fluid -->
                 </div>
@@ -131,4 +174,25 @@
     </body>
 
     </html>
+@endsection
+@section('scripts')
+    <script>
+        $(function() {
+            $("#example1").DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            // $('#example2').DataTable({
+            // "paging": true,
+            // "lengthChange": false,
+            // "searching": false,
+            // "ordering": true,
+            // "info": true,
+            // "autoWidth": false,
+            // "responsive": true,
+            // });
+        });
+    </script>
 @endsection
